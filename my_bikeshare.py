@@ -181,7 +181,7 @@ def user_stats(df):
     if 'Gender' in df:
         blank_gender = str(int(df['Gender'].isna().sum()))
         print(df['Gender'].value_counts().to_frame())
-        print('Users without a recorded gender: ' + blank_gender)
+        print('Users without a recorded gender: ', blank_gender)
     else:
         print('Genders are not available for this city.')
 
@@ -192,10 +192,10 @@ def user_stats(df):
         latest_birth = str(int(df['Birth Year'].max()))
         commonest_birth = str(int(df['Birth Year'].mode()))
         blank_birth = str(int(df['Birth Year'].isna().sum()))
-        print('Earliest year of birth:    ' + earliest_birth)
-        print('Most recent year of birth: ' + latest_birth)
-        print('Most common year of birth: ' + commonest_birth)
-        print('Users without a recorded birth: ' + blank_birth)
+        print('Earliest year of birth:    ', earliest_birth)
+        print('Most recent year of birth: ', latest_birth)
+        print('Most common year of birth: ', commonest_birth)
+        print('Users without a recorded birth: ', blank_birth)
     else:
         print('Birth Years are not available for this city.')
     print("\nThis took %s seconds." % (time.time() - start_time))
