@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+This project and README files were created 2019.12.14.
 
-### Project Title
-Replace the Project Title
+### my_bikeshare.py
+my_bikeshare is the Project Title
 
 ### Description
-Describe what your project is about and what it does
+This project solicits and handles raw user input. It then uses descriptive statistics to answer questions about the data. Raw data can be displayed upon request by the user.
 
 ### Files used
-Include the files used
+The files used are:
+  chicago.csv
+  my_bikeshare.py
+  new_york_city.csv
+  washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+This repo inspired and originated by:
+https://github.com/udacity/pdsnd_github
