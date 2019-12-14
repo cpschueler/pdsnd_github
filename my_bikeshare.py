@@ -137,16 +137,16 @@ def station_stats(df):
 
     # display most commonly used start station
     commonest_start_station = (df['Start Station'].mode()[0])
-    print('Most common start station: ' + commonest_start_station)
+    print('Most common start station: ', commonest_start_station)
 
     # display most commonly used end station
     commonest_end_station = (df['End Station'].mode()[0])
-    print('Most common end station: ' + commonest_end_station)
+    print('Most common end station: ', commonest_end_station)
 
     # display most frequent combination of start station and end station trip
     df['combo'] = (df['Start Station']) + ' to ' + (df['End Station'])
     commonest_station_combo = (df['combo'].mode()[0])
-    print('Most common start and end station combination: ' + commonest_station_combo)
+    print('Most common start and end station combination: ', commonest_station_combo)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -160,11 +160,11 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_travel_time = str(int(df['Trip Duration'].sum()))
-    print('Total travel time: ' + total_travel_time)
+    print('Total travel time: ', total_travel_time)
 
     # display mean travel time
     mean_travel_time = str(df['Trip Duration'].mean())
-    print('Mean travel time: ' + mean_travel_time)
+    print('Mean travel time: ', mean_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -185,7 +185,7 @@ def user_stats(df):
     if 'Gender' in df:
         blank_gender = str(int(df['Gender'].isna().sum()))
         print(df['Gender'].value_counts().to_frame())
-        print('Users without a recorded gender: ' + blank_gender)
+        print('Users without a recorded gender: ', blank_gender)
     else:
         print('Genders are not available for this city.')
 
@@ -196,10 +196,10 @@ def user_stats(df):
         latest_birth = str(int(df['Birth Year'].max()))
         commonest_birth = str(int(df['Birth Year'].mode()))
         blank_birth = str(int(df['Birth Year'].isna().sum()))
-        print('Earliest year of birth:    ' + earliest_birth)
-        print('Most recent year of birth: ' + latest_birth)
-        print('Most common year of birth: ' + commonest_birth)
-        print('Users without a recorded birth: ' + blank_birth)
+        print('Earliest year of birth:    ', earliest_birth)
+        print('Most recent year of birth: ', latest_birth)
+        print('Most common year of birth: ', commonest_birth)
+        print('Users without a recorded birth: ', blank_birth)
     else:
         print('Birth Years are not available for this city.')
     print("\nThis took %s seconds." % (time.time() - start_time))
